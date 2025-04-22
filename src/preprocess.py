@@ -1,5 +1,5 @@
 
 def preprocess(json):
 
-    '''von JSON Datei Whitespaces entfernen'''
-    return preprocessed_data
+    json_strip = str(json).strip()
+    return json_strip

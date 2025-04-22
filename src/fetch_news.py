@@ -6,9 +6,6 @@ def fetch_news():
     load_dotenv()
     api_key = os.getenv("API_KEY")
 
-    url = ('https://newsapi.org/v2/top-headlines?'
-       'country=us&'
-       f'apiKey={api_key}')
-    response = requests.get(url)
+    url = (f'https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}')
+    response = requests.get(url).json()
     return response
-
